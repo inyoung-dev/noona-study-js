@@ -22,5 +22,3 @@ a = B
 b = A
 c = C
 console.log(a,b,c)
-
-//문제2//
