@@ -72,7 +72,7 @@ function reset() {
     gameOver = false;
     history = [];
 
-    resultArea.textContent = "1과 100 사이의 숫자를 입력하세요";
+    resultArea.textContent = "1과 100 사이의 숫자를 입력해 주세요!";
     chanceArea.textContent = `남은 기회 : ${chances}번`;
     historyArea.textContent = "";
     
