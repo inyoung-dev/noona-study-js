@@ -15,8 +15,9 @@ let taskList = []
 addButton.addEventListener("click",addTask)
 
 function addTask(){
-    let taskContent = taskInput.value
-    taskList.push(taskContent)
+    let taskContent = taskInput.value;
+    taskList.push(taskContent);
+    render();
 }
 
 function render(){
