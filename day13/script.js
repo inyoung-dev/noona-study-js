@@ -5,6 +5,7 @@ const getLatestNews = async() => {
     const response = await fetch(url);
     const data = await response.json();
     let news = data.articles;
+    console.log("news", news);
 };
 
 getLatestNews();
