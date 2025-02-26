@@ -1,144 +1,172 @@
-.head-line-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .icon-button {
-    padding: 8px 9px 9px;
-    margin-top: 5px;
-  }
-  .icon-button:hover {
-    background-color: beige;
-  }
-  .hide {
-    display: none;
-  }
-  .head-line {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-  }
-  .head-line svg {
-      max-width: 430px;
-      margin:0px 20px
-  }
-  .menus {
-    display: flex;
-    justify-content: center;
-    padding: 5px 0 4px;
-    border-top: 1px solid rgb(235, 235, 235);
-    border-bottom: 4px double black;
-    flex-wrap: wrap;
-  }
-  .menus button {
-    margin: 5px;
-    border: none;
-    background: none;
-  }
-  .menus button:hover {
-    background-color: beige;
-    border-radius: 3px;
-  }
-  .news {
-    display: flex;
-    padding: 1em;
-    border-bottom: 2px solid black;
-  }
-  .news-img-size {
-    max-width: 100%;
-    max-height: 250px;
-    margin-right: 1em;
-    text-align: center;
-  }
-  .title {
-    font-size: 20pt;
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    margin-top: 2em;
-  }
-  .title:hover {
-    text-decoration: underline;
-    color: blue;
-  }
-  .side-menu {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: burlywood;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-  }
-  .side-menu-list button {
-    margin: 5px;
-    border: none;
-    background: none;
-    width: 120px;
-  }
-  
-  .side-menu .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-    border: none;
-    background: none;
-  }
-  
-  .side-menu-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .side-menu-list button:hover {
-    background-color: beige;
-    border-radius: 3px;
-  }
-  .search-button {
-    background-color: rgb(86, 123, 149);
-    border: 1px solid rgb(50, 104, 145);
-    color: rgb(255, 255, 255);
-    height: 33px;
-    border-radius: 3px;
-  }
-  #search-input {
-    border: 1px solid rgb(226, 226, 226);
-    border-radius: 3px;
-    height: 33px;
-  }
-  
-  #input-area {
-    display: none;
-  }
-  @media screen and (max-width: 63rem) {
-    .hide {
-      display: inline;
-    }
-    .menus {
-      display: none;
-    }
-  }
-  .pagenation-nav {
-    display: flex;
-    justify-content: center;
-  }
-  .pagination {
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.title {
     margin-top: 1em;
-  }
-  .page-item.active .page-link{
-      background-color: burlywood;
-      color: white;
-      border-color: burlywood;
-  }
-  .page-link{
-      color:burlywood
-  }
-  .col-lg-8{
-      margin-top:1em
-  }
+    display: flex;
+    justify-content: center;
+}
+.title svg{
+    width: 430px;
+}
+.container {
+    display: contents;
+    
+}
+nav {
+    display: flex;
+    position: relative;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+.menus{
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 4px double black;
+    
+}
+.menus button{
+    border: none;   
+    background: none;
+    margin: 5px;
+}
+.menus button:hover{
+    background-color: beige;
+}
+.news-img-size{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    max-height: 250px
+    
+}
+.news-list {
+    border-bottom: 2px solid black;
+    padding: 1em 5px;
+}
+#menu-board{
+    margin-left: 0;
+    max-width: 200px;
+    display: flex;
+    position: relative;
+    background-color: none;
+}
+nav em{
+    position: absolute;
+    padding: 0;
+    left: -310px;
+    transition: 0.5s;
+}
+.menu-box{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    min-height: 100vh;
+    justify-content: center;
+    transition: 0.5s;
+    position: relative;
+    margin-top: 0;
+    background-color: bisque;
+    transition: 0.5s;
+}
+.x-icon{
+    position: absolute;
+    top: 1em;
+    left: 80%;
+    cursor: pointer;
+}
+.menu-box button{
+    border: none;
+    background: none;
+    padding: 1em 0px;
+}
+.bar-icon{
+    display: none;
+    position: absolute;
+    top: 1em;
+    
+    cursor: pointer;
+}
+.search-area{
+    position: absolute;
+    left: 1em;
+}
+.search-box{
+    display: flex;
+    margin-top: 1em;
+    position: relative;
+}
+.search-box i{
+    cursor: pointer;
+    margin-right: 1em;
+    
+}
+.search-box > span{
+    display: none;
+    margin-top: -0.5em;
+    position: absolute;
+    left: 1.5em;
+    width: 400px;
+}
+#input-box{
+    border: 1px solid #ebebeb;
+}
+#input-box:focus{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(25, 135, 84) ;
+    transition: 0.2s;
+}
+.btn-outline-success{
+    padding: 1px 4px;
+    position: absolute;
+    left: 190px;
+    background-color: blue;
+    color: white;
+}
+.btn-outline-success:hover{
+    background-color: white;
+    color: blue;
+}
+.display-none{
+    display: none;
+}
+.pagination-nav{
+    display: flex;
+    justify-content: center;
+}
+.pagination {
+    --bs-pagination-color: blue;
+    --bs-pagination-hover-color:blue;
+    --bs-pagination-focus-color:blue;
+    --bs-pagination-active-bg:blue;
+    --bs-pagination-active-border-color:blue;
+    
+}
+
+@media screen and (max-width:600px){
+    .bar-icon{
+        display : block;
+        position: absolute;
+        top: 1em;
+        left: 0.5em;
+    }
+    .menus{
+        display: none;
+    }
+    .title svg{
+        width: 260px;
+        margin-bottom: 1em;
+    }
+    .search-area{
+        position: absolute;
+        left: 2em;
+    }
+   
+}
